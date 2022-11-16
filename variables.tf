@@ -16,12 +16,7 @@ variable "aws_secret_access_key" {
 variable "aws_session_token" {
     default=(AWS_SESSION_TOKEN) 
 }
-variable "aws_region" {
-    default="us-east-1"
-}
-variable "aws_region" {
-    default="us-east-1"
-}
+
 
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
