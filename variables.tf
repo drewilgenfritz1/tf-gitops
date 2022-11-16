@@ -7,6 +7,22 @@ variable "base_cidr_block" {
   default = "172.17.0.0/16"
 }
 
+variable "aws_access_key_id" {
+    default=(AWS_ACCESS_KEY_ID)
+}
+variable "aws_secret_access_key" {
+    default=(AWS_SECRET_ACCESS_KEY)
+}
+variable "aws_session_token" {
+    default=(AWS_SESSION_TOKEN) 
+}
+variable "aws_region" {
+    default="us-east-1"
+}
+variable "aws_region" {
+    default="us-east-1"
+}
+
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
 #   default = "172.17.0.0/16"
