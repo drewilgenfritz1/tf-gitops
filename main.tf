@@ -14,9 +14,9 @@ data "external" "env" {
 
 provider "aws" {
   region = var.aws_region
-  access_key = var.aws_access_key_id
-  secret_key = var.aws_secret_access_key
-  token = var.aws_session_token
+  access_key = var.access_key
+  secret_key = var.secret_key
+  token = var.session_token
    
 }
 

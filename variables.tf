@@ -7,18 +7,18 @@ variable "base_cidr_block" {
   default = "172.17.0.0/16"
 }
 
-variable "aws_access_key_id" {
+variable "access_key" {
     # default=data.external.env.AWS_ACCESS_KEY_ID
-    default = awscreds.AWS_ACCESS_KEY_ID
+    # default = awscreds.AWS_ACCESS_KEY_ID
 
 }
-variable "aws_secret_access_key" {
+variable "secret_key" {
     # default=data.external.env.AWS_SECRET_ACCESS_KEY
-    default = awscreds.AWS_SECRET_ACCESS_KEY
+    # default = awscreds.AWS_SECRET_ACCESS_KEY
 }
-variable "aws_session_token" {
+variable "session_token" {
     # default=data.external.env.AWS_SESSION_TOKEN
-    default = awscreds.AWS_SESSION_TOKEN
+    # default = awscreds.AWS_SESSION_TOKEN
 }
 
 
