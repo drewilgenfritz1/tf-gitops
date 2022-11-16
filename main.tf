@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+data "external" "env" {
+  program = ["${path.module}/env.sh"]
+  
+}
+
 provider "aws" {
   region = var.aws_region
   access_key = var.aws_access_key_id
