@@ -11,3 +11,11 @@ provider "aws" {
   region = "us-east-1"
    
 }
+
+resource "aws_vpc" "TKGVPC" {
+    cidr_block = var.base_cidr_block
+
+    tags = {
+      "Name" = "TKGVPC2"
+    }
+}
