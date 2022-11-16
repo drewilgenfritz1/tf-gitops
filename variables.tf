@@ -9,12 +9,16 @@ variable "base_cidr_block" {
 
 variable "aws_access_key_id" {
     # default=data.external.env.AWS_ACCESS_KEY_ID
+    default = "${AWS_ACCESS_KEY_ID}"
+
 }
 variable "aws_secret_access_key" {
     # default=data.external.env.AWS_SECRET_ACCESS_KEY
+    default = "${AWS_SECRET_ACCESS_KEY}"
 }
 variable "aws_session_token" {
     # default=data.external.env.AWS_SESSION_TOKEN
+    default = "${AWS_SESSION_TOKEN}"
 }
 
 
