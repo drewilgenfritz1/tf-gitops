@@ -20,13 +20,13 @@ provider "aws" {
    
 }
 
-# resource "aws_vpc" "TKGVPC" {
-#     cidr_block = var.base_cidr_block
+resource "aws_vpc" "TKGVPC" {
+    cidr_block = var.base_cidr_block
 
-#     tags = {
-#       "Name" = "TKGVPC2"
-#     }
-# }
+    tags = {
+      "Name" = "TKGVPC2"
+    }
+}
 
 # resource "aws_internet_gateway" "tkg-inet-gw" {
 #     vpc_id = aws_vpc.TKGVPC.id
