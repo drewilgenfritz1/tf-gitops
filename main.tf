@@ -57,7 +57,7 @@ resource "aws_eip" "tkg-eip" {
 
 resource "aws_subnet" "priv-a" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.0.0/24"
+  cidr_block = "172.17.0.0/24"
   availability_zone = "us-east-1a"
 
   tags = {
@@ -67,7 +67,7 @@ resource "aws_subnet" "priv-a" {
 
 resource "aws_subnet" "priv-b" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.1.0/24"
+  cidr_block = "172.17.1.0/24"
   availability_zone = "us-east-1b"
 
   tags = {
@@ -77,7 +77,7 @@ resource "aws_subnet" "priv-b" {
 
 resource "aws_subnet" "priv-c" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.2.0/24"
+  cidr_block = "172.17.2.0/24"
   availability_zone = "us-east-1c"
 
   tags = {
@@ -87,7 +87,7 @@ resource "aws_subnet" "priv-c" {
 
 resource "aws_subnet" "pub-a" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.3.0/24"
+  cidr_block = "172.17.3.0/24"
   availability_zone = "us-east-1a"
   map_public_ip_on_launch = true
 
@@ -98,7 +98,7 @@ resource "aws_subnet" "pub-a" {
 
 resource "aws_subnet" "pub-b" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.4.0/24"
+  cidr_block = "172.17.4.0/24"
   availability_zone = "us-east-1b"
   map_public_ip_on_launch = true
 
@@ -109,7 +109,7 @@ resource "aws_subnet" "pub-b" {
 
 resource "aws_subnet" "pub-c" {
   vpc_id     = aws_vpc.TKGVPC.id
-  cidr_block = "172.16.5.0/24"
+  cidr_block = "172.17.5.0/24"
   availability_zone = "us-east-1c"
   map_public_ip_on_launch = true
 
