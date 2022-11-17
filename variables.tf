@@ -19,6 +19,7 @@ variable "secret_key" {
 variable "session_token" {
     # default=data.external.env.AWS_SESSION_TOKEN
     # default = ""
+    
 }
 
 # variable "base_cidr_block2" {
