@@ -9,7 +9,7 @@ variable "base_cidr_block" {
 
 variable "access_key" {
     # default=data.external.env.AWS_ACCESS_KEY_ID
-    default = "${access_key}"
+    default = ""
 }
 
 variable "secret_key" {
