@@ -55,7 +55,7 @@ resource "aws_eip" "tkg-eip" {
   
 }
 
-resource "aws_subnet" "priv-a2" {
+resource "aws_subnet" "priv-a" {
   vpc_id     = aws_vpc.TKGVPC.id
   cidr_block = "172.17.0.0/24"
   availability_zone = "us-east-1a"
