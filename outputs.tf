@@ -25,3 +25,7 @@ output "pub_subnet_b" {
 output "pub_subnet_c" {
   value = aws_subnet.pub-c.id
 }
+
+output "region"{
+    value = var.aws_region
+}
