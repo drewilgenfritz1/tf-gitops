@@ -7,19 +7,19 @@ variable "base_cidr_block" {
   default = "172.17.0.0/16"
 }
 
-variable "access_key" {
-    # default=data.external.env.AWS_ACCESS_KEY_ID
-    default = ""
-}
+# variable "access_key" {
+#     # default=data.external.env.AWS_ACCESS_KEY_ID
+#     default = ""
+# }
 
-variable "secret_key" {
-    # default=data.external.env.AWS_SECRET_ACCESS_KEY
-    default = ""
-}
-variable "session_token" {
-    # default=data.external.env.AWS_SESSION_TOKEN
-    default = ""
-}
+# variable "secret_key" {
+#     # default=data.external.env.AWS_SECRET_ACCESS_KEY
+#     default = ""
+# }
+# variable "session_token" {
+#     # default=data.external.env.AWS_SESSION_TOKEN
+#     default = ""
+# }
 
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
