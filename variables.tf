@@ -14,13 +14,12 @@ variable "access_key" {
 
 variable "secret_key" {
     # default=data.external.env.AWS_SECRET_ACCESS_KEY
-    # default = awscreds.AWS_SECRET_ACCESS_KEY
+    default = ""
 }
 variable "session_token" {
     # default=data.external.env.AWS_SESSION_TOKEN
-    # default = awscreds.AWS_SESSION_TOKEN
+    default = ""
 }
-
 
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
