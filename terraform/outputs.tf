@@ -1,28 +1,28 @@
-output "vpc_id" {
+output "aws-vpc-cidr" {
   value = aws_vpc.TKGVPC.id
 }
 
-output "priv_subnet_a" {
+output "aws-private-subnet-id" {
   value = aws_subnet.priv-a.id
 }
 
-output "priv_subnet_b" {
+output "aws-private-subnet-id-1" {
   value = aws_subnet.priv-b.id
 }
 
-output "priv_subnet_c" {
+output "aws-private-subnet-id-2" {
   value = aws_subnet.priv-c.id
 }
 
-output "pub_subnet_a" {
+output "aws-public-subnet-id" {
   value = aws_subnet.pub-a.id
 }
 
-output "pub_subnet_b" {
+output "aws-public-subnet-id-1" {
   value = aws_subnet.pub-b.id
 }
 
-output "pub_subnet_c" {
+output "aws-public-subnet-id-2" {
   value = aws_subnet.pub-c.id
 }
 
@@ -30,10 +30,26 @@ output "region"{
     value = var.aws_region
 }
 
-output "subnetcidrs" {
-    value = [
-      aws_subnet.pub-c.id,
-      aws_subnet.pub-c.cidr_block
+output "aws-public-node-cidr"{
+  value = aws_subnet.pub-a.cidr_block
+}
 
-    ]
+output "aws-public-node-cidr-1"{
+  value = aws_subnet.pub-b.cidr_block
+}
+
+output "aws-public-node-cidr-2"{
+  value = aws_subnet.pub-c.cidr_block
+}
+
+output "aws-private-cidr" {
+  value = aws_subnet.priv-a.cidr_block
+}
+
+output "aws-private-cidr-1" {
+  value = aws_subnet.priv-b.cidr_block
+}
+
+output "aws-private-cidr-2" {
+  value = aws_subnet.priv-c.cidr_block
 }
