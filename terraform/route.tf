@@ -16,7 +16,7 @@ resource "aws_route" "default" {
 
 resource "aws_route" "priv-route-1" {
   route_table_id            = aws_route_table.priv-rt.id
-  destination_cidr_block    = "172.17.0.0/12"
+  destination_cidr_block    = "172.16.0.0/12"
   transit_gateway_id        = aws_ec2_transit_gateway.transit-gw.id
   depends_on                = [aws_route_table.priv-rt]
 }
@@ -54,7 +54,7 @@ resource "aws_route" "default-pub" {
 
 resource "aws_route" "pub-route-1" {
   route_table_id            = aws_route_table.pub-rt.id
-  destination_cidr_block    = "172.17.0.0/12"
+  destination_cidr_block    = "172.16.0.0/12"
   transit_gateway_id        = aws_ec2_transit_gateway.transit-gw.id
   depends_on                = [aws_route_table.pub-rt]
 }
