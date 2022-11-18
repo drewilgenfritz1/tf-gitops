@@ -42,14 +42,14 @@ output "aws-public-node-cidr-2"{
   value = aws_subnet.pub-c.cidr_block
 }
 
-output "aws-private-cidr" {
+output "aws-private-node-cidr" {
   value = aws_subnet.priv-a.cidr_block
 }
 
-output "aws-private-cidr-1" {
+output "aws-private-node-cidr-1" {
   value = aws_subnet.priv-b.cidr_block
 }
 
-output "aws-private-cidr-2" {
+output "aws-private-node-cidr-2" {
   value = aws_subnet.priv-c.cidr_block
 }
