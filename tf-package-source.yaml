@@ -1,0 +1,34 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: tf-packages
+  namespace: flux-system
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  url: https://github.com/drewilgenfritz1/tf-gitops
+  # url: https://github.com/tf-controller/helloworld
+
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: tf-packages
+  namespace: flux-system
+spec:
+  destroy: False
+  interval: 1m
+  approvePlan: auto
+  path: ./terraform
+  # retryInterval: 15s
+  sourceRef:
+    kind: GitRepository
+    name: tf-packages
+    namespace: flux-system
+  varsFrom:
+  - kind: Secret
+    name: awscreds
+  writeOutputsToSecret:
+    name: terraformsubnets
