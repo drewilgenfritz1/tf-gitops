@@ -24,7 +24,7 @@ resource "aws_vpc" "TKGVPC" {
     cidr_block = var.base_cidr_block
 
     tags = {
-      "Name" = "TKGVPC2"
+      "Name" = var.cluster_name
     }
 }
 
@@ -32,7 +32,7 @@ resource "aws_internet_gateway" "tkg-inet-gw" {
     vpc_id = aws_vpc.TKGVPC.id
 
     tags = {
-        "Name" = "tkg-inet-gw2"
+        "Name" = "${var.env}-inet-gw"
     } 
   
 }
@@ -42,7 +42,7 @@ resource "aws_nat_gateway" "nat-gw" {
   subnet_id     = aws_subnet.pub-a.id
 
   tags = {
-    Name = "nat-gw2"
+    Name = "${var.env}-nat-gw"
   }
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
@@ -61,7 +61,7 @@ resource "aws_subnet" "priv-a" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "priv-a2"
+    Name = "${var.env}-priv-a"
   }
 }
 
@@ -71,7 +71,7 @@ resource "aws_subnet" "priv-b" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name = "priv-b2"
+    Name = "${var.env}-priv-b"
   }
 }
 
@@ -81,7 +81,7 @@ resource "aws_subnet" "priv-c" {
   availability_zone = "us-east-1c"
 
   tags = {
-    Name = "priv-c2"
+    Name = "${var.env}-=priv-c"
   }
 }
 
@@ -92,7 +92,7 @@ resource "aws_subnet" "pub-a" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "pub-a2"
+    Name = "${var.env}-pub-a"
   }
 }
 
@@ -103,7 +103,7 @@ resource "aws_subnet" "pub-b" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "pub-b2"
+    Name = "${var.env}-pub-b"
   }
 }
 
@@ -114,7 +114,7 @@ resource "aws_subnet" "pub-c" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "pub-c2"
+    Name = "${var.env}-pub-c"
   }
 }
 

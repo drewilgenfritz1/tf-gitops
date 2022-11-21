@@ -22,6 +22,14 @@ variable "session_token" {
     
 }
 
+variable "env" {
+  
+}
+
+variable "cluster_name" {
+  
+}
+
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
 #   default = "172.17.0.0/16"
