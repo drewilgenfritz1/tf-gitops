@@ -30,6 +30,18 @@ variable "cluster_name" {
   
 }
 
+variable "cidrs" {
+    default = {
+        private-cidr-a = "fr"
+        private-cidr-b = "fd"
+        private-cidr-c = "fds"
+        public-cidr-a = "fds"
+        public-cidr-b = "sdf"
+        public-cidr-c = ""
+    }
+  
+}
+
 # variable "base_cidr_block2" {
 #   description = "main cidr block"
 #   default = "172.17.0.0/16"
