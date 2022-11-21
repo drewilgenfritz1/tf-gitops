@@ -81,7 +81,7 @@ resource "aws_subnet" "priv-c" {
   availability_zone = "us-east-1c"
 
   tags = {
-    Name = "${var.env}-=priv-c"
+    Name = "${var.env}-priv-c"
   }
 }
 
